@@ -47,22 +47,6 @@ async def plot_csv(
     output_format: str = Form("png"),
     dpi: int = Form(300)
 ):
-    """
-    Create plots from CSV data
-    
-    Supported plot types:
-    - line: Line plot (requires x_col and y_col)
-    - scatter: Scatter plot (requires x_col and y_col)
-    - bar: Bar chart (requires x_col and y_col)
-    - histogram: Histogram (requires only x_col)
-    - box: Box plot (requires only x_col, or x_col and y_col for grouped)
-    - violin: Violin plot (requires only x_col, or x_col and y_col for grouped)
-    - heatmap: Correlation heatmap (ignores x_col and y_col, uses all numeric columns)
-    - area: Area plot (requires x_col and y_col)
-    - pie: Pie chart (requires x_col for labels and y_col for values)
-    
-    Supported output formats: png, jpg, svg, pdf
-    """
     
     try:
         # Read CSV
