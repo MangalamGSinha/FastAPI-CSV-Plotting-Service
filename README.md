@@ -1,4 +1,4 @@
-# 📊 FastAPI-CSV-Plotting-Service
+# 📊 FastAPI CSV Plotting Service
 ---
 
 A FastAPI-powered backend service to generate a wide range of plots from uploaded CSV files. It supports common chart types like line, scatter, histogram, bar, box, violin, pie, heatmap, and area — and returns the plots in various formats (PNG, JPG, SVG, PDF).
@@ -17,10 +17,10 @@ A FastAPI-powered backend service to generate a wide range of plots from uploade
 
 ## 📦 Installation
 
-### Clone the repository and install the required packages.
+### 👥Clone the repository and install the required packages.
 
 ```bash
-git clone https://github.com/your-username/csv-plotting-api.git
+git clone https://github.com/MangalamGSinha/FastAPI-CSV-Plotting-Service.git
 cd csv-plotting-api
 pip install fastapi uvicorn pandas matplotlib seaborn numpy
 ```
@@ -49,6 +49,19 @@ After starting the server, open your browser and navigate to:
   * Preview responses and download images
 
 Scroll to the /plot/ endpoint → Click Try it out → Fill JSON → Click Execute.
+
+---
+### 📫 Using Postman:
+
+* Select **POST** method to `http://127.0.0.1:8000/plot_csv`
+* Under **Body** tab, choose **form-data**
+* Add key `file` of type **File** and upload your CSV file
+* Add other keys (all of type Text):
+
+  * `x_col`: name of the column to use as x-axis
+  * `y_col`: name of the column to use as y-axis
+  * `plot_type`: one of `"line"`, `"scatter"`, `"bar"`, `"histogram"`, `"box"`, `"violin"`, `"heatmap"`, `"area"`, `"pie"`
+  * `xlabel`, `ylabel`, `title`, `figsize_width`, `figsize_height`, `output_format`, `dpi`: (optional labels and title)
 
 ---
 
